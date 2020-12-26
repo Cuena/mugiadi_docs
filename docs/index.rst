@@ -10,11 +10,15 @@ Documentación proyecto mugiadi!
    :maxdepth: 2
    :caption: Contents:
 
+   
+   introduccion
+   api
 
 
-Indices and tables
-==================
+.. Indice
+.. ==================
 
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+.. * :ref:`genindex`
+.. * :ref:`modindex`
+.. * :ref:`search`
+.. * :ref:`api`

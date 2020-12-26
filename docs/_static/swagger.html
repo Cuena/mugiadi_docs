@@ -1,0 +1,189 @@
+<!-- HTML for static distribution bundle build -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <!-- <title>Swagger UI</title>
+  <link rel="stylesheet" type="text/css" href="./swagger-ui.css">
+  <link rel="icon" type="image/png" href="./favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="./favicon-16x16.png" sizes="16x16" /> -->
+  <title>Swagger UI</title>
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Source+Code+Pro:300,600|Titillium+Web:400,600,700"
+    rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/3.2.2/swagger-ui.css">
+  <style>
+    html {
+      box-sizing: border-box;
+      overflow: -moz-scrollbars-vertical;
+      overflow-y: scroll;
+    }
+
+    *,
+    *:before,
+    *:after {
+      box-sizing: inherit;
+    }
+
+    body {
+      margin: 0;
+      background: #fafafa;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="swagger-ui"></div>
+
+  <!-- <script src="./swagger-ui-bundle.js" charset="UTF-8"> </script>
+  <script src="./swagger-ui-standalone-preset.js" charset="UTF-8"> </script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/3.2.2/swagger-ui-bundle.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/3.2.2/swagger-ui-standalone-preset.js"></script>
+  <script>
+    window.onload = function () {
+
+      //swaggger code
+      var spec = {
+        "openapi": "3.0.0",
+        "info": {
+          "title": "Mugiadi app",
+          "description": "Servidor que gestiona la aplicación de movil.\n",
+          // "termsOfService": "http://swagger.io/terms/",
+          // "contact": {
+          //   "email": "kike.lopez@opendeusto.es"
+          // },
+          // "license": {
+          //   "name": "Apache 2.0",
+          //   "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+          // },
+        
+        },
+        "servers": [
+          {
+            "url": "https://virtserver.swaggerhub.com/Kike00/Mugiadi/1.0.0",
+            "description": "SwaggerHub API Auto Mocking"
+          }
+        ],
+        "tags": [
+          {
+            "name": "users",
+            "description": "users"
+          },
+          {
+            "name": "station",
+            "description": "x"
+          },
+          {
+            "name": "target",
+            "description": "x"
+          }
+        ],
+        "paths": {
+          "/station/id": {
+            "get": {
+              "tags": [
+                "station"
+              ],
+              "summary": "get station from id",
+              "operationId": "getStationFromId",
+              "responses": {
+                "default": {
+                  "description": "successful operation"
+                }
+              }
+            }
+          }
+        },
+        "components": {
+          "schemas": {
+            "Station": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer",
+                  "format": "int64"
+                },
+                "lat": {
+                  "type": "number",
+                  "format": "double"
+                },
+                "lon": {
+                  "type": "number",
+                  "format": "double"
+                },
+                "name": {
+                  "type": "string"
+                }
+              }
+            },
+            "Charger": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer",
+                  "format": "int64"
+                },
+                "status": {
+                  "type": "number"
+                }
+              }
+            },
+            "User": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer",
+                  "format": "int64"
+                },
+                "username": {
+                  "type": "string"
+                },
+                "firstName": {
+                  "type": "string"
+                },
+                "lastName": {
+                  "type": "string"
+                },
+                "email": {
+                  "type": "string"
+                },
+                "password": {
+                  "type": "string"
+                },
+                "phone": {
+                  "type": "string"
+                },
+                "userStatus": {
+                  "type": "integer",
+                  "description": "User Status",
+                  "format": "int32"
+                }
+              },
+              "xml": {
+                "name": "User"
+              }
+            }
+          }
+        }
+      };
+      // Begin Swagger UI call region
+      const ui = SwaggerUIBundle({
+        spec: spec,
+        dom_id: '#swagger-ui',
+        deepLinking: true,
+        presets: [
+          SwaggerUIBundle.presets.apis,
+        ],
+        plugins: [
+          SwaggerUIBundle.plugins.DownloadUrl
+        ],
+      })
+      // End Swagger UI call region
+
+      window.ui = ui
+    }
+  </script>
+</body>
+
+</html>
