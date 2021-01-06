@@ -2,7 +2,8 @@
 Introducción 
 =======================
 
-Documentación del proyecto mugiadi
+Documentación del proyecto Mugiadi
+
 
 Modelo de datos
 -----------------------
