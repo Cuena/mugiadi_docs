@@ -6,8 +6,8 @@ Introducción
 Contexto
 -----------------------
 
-Esta página recoge la información sobre el desarrollo de la aplicación para el Birloki Energy Activator, una solución con el 
-objetivo de fomentar la movilidad sostenible. 
+Esta página recoge la información sobre el desarrollo de la aplicación para el Birloki Energy Activator, 
+una solución con el objetivo de fomentar la movilidad sostenible. 
 
 La aplicación móvil permitirá a los usuarios interactuar con la estación mediante un código QR, 
 activando un cargador listo para ser usado. Para ello, se ha creado un modelo de datos y la especificación de la API que será utilizada.
@@ -16,15 +16,13 @@ La arqitectura de la solución propuesta es la siguiente:
 
 .. image:: _static/arquitectura.png
 
-* **Birloki**: La estación cuenta con un módulo de cargadores, que se activarán cuando los usuarios lo necesiten. Las estaciones estarán conectadas a la 
-red, enviando y recibiendo información sobre los usuarios y el entorno.
+* **Birloki**: La estación cuenta con un módulo de cargadores, que se activarán cuando los usuarios lo necesiten. Las estaciones estarán conectadas a la red, enviando y recibiendo información sobre los usuarios y el entorno.
 
-* **Aplicación móvil** Los usuarios deberán identificarse mediente la app para poder escanear el código QR que activará los cargadores. Esta aplicación
-gestionará todo lo relacionado con el servicio de alquiler de energía.
+* **Aplicación móvil**: Los usuarios deberán identificarse mediente la app para poder escanear el código QR que activará los cargadores. Esta aplicación gestionará todo lo relacionado con el servicio de alquiler de energía.
 
-* **API** La API se encargará de gestionar las peticiones de la aplicación, guardando y haciendo accesibles los datos necesarios.
+* **API**: La API se encargará de gestionar las peticiones de la aplicación, guardando y haciendo accesibles los datos necesarios.
 
-* **Servidor** Todos los dispositivos harán peticiones al servidor dedicado.
+* **Servidor**: Todos los dispositivos harán peticiones al servidor dedicado.
 
 Prototipo
 -----------------------
