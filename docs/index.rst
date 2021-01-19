@@ -3,8 +3,8 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Documentación proyecto mugiadi!
-===================================
+Documentación de la aplicación para Birloki Energy Activator
+=================================================================
 
 .. toctree::
    :maxdepth: 2
